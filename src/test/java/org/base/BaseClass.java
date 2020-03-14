@@ -18,7 +18,7 @@ public class BaseClass {
 	public static WebDriver driver;
 
 	public WebDriver getDriver() {
-		System.setProperty("webdriver.chrome.driver", "E:\\Eclipse-workspace\\CucumberBase\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Eclipse-workspace\\CucumberBase\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		screensShot();

@@ -22,7 +22,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class StepDefinition extends BaseClass {
-	WebDriver driver;
+
 	LoginPage page;
 	SearchHotel page1;
 	SelectHotel page2;
@@ -31,8 +31,8 @@ public class StepDefinition extends BaseClass {
 	@Given("User is on the Adactin homepage")
 	public void user_is_on_the_Adactin_homepage() {
 
-		driver = getDriver();
-		loadUrl("https://adactin.com/HotelApp/");
+//		driver = getDriver();
+//		loadUrl("https://adactin.com/HotelApp/");
 
 	}
 
@@ -52,7 +52,7 @@ public class StepDefinition extends BaseClass {
 	public void user_clicks_the_login_button() {
 		WebElement btn = page.getBtn();
 		btnclick(btn);
-		screensShot();
+		
 	}
 
 	@When("User should verify the message")
@@ -127,7 +127,7 @@ public class StepDefinition extends BaseClass {
 		page3 = new ConfirmationPage();
 		WebElement btnCo = page3.getBtnCon();
 		btnclick(btnCo);
-		screensShot();
+		//screensShot();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		WebElement orderId = page3.getOrder();
 		String txt = orderId.getAttribute("value");
